@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Otsikko -->  
+<div class="media-body" style= "background-color: #d2f0ed">
+    <h6><img src="{{ url_for('static', filename='pics/default.jpg') }}" class="rounded-circle" alt="" width="200" height="200">
+      Kukka ystävyydelle! Muista ystävää, lähetä kukkia.</h6> 
+</div>
+
+<!-- Sisältö --> 
+<div class="container mt-5">
+<h4>Yleiset toimitusehdot</h4><br> 
+    <div class="row">
+        <div class="col-sm-4">
+        <p>
+            Nämä toimitusehdot koskevat kaikkea asiakkaille TOIMITETTAVAA MYYNTIÄ tilaustavasta riippumatta. 
+            Tilaustapoina voivat olla mm. puhelin-, internet-, sähköposti- ja myymälätilukset.
+        </p>
+        </div>
+            <div class="col-sm-7">
+              <p><img src="{{ url_for('static', filename='pics/kevat2.jpg') }}" class="rounded-circle" alt="kevat3" width="150" height="150"></p>
+              <h3></h3>
+            </div>
+          </div>
+    </div>
+<div>
+
+<div class="container mt-5">
+<h4>Tuotevalikoima</h4><br> 
+    <div class="row">
+        <div class="col-sm-4">
+            <p><img src="{{ url_for('static', filename='pics/syntyma2.jpg') }}" class="rounded-circle" alt="kevat3" width="150" height="150"></p>
+        </div>  
+        <div class="col-sm-7">
+            <p>
+                TUOTEVALIKOIMA - Sivuilla näkyvä tuotevalikoima on esimerkin omainen. 
+                Kaikki tuotteet valmistetaan aina tilauksen jälkeen eikä niitä ole valmiina 
+                varastossa. Tuotteiden ulkonäössä ja sisällössä on eroja koska paikallinen 
+                valikoima voi vaihdella suurestikin. Toimittava kauppias pyrkii aina valmistamaan 
+                tilatut tuotteet tuotekuvien mukaisesti. Mikäli vastaavaa tuotetta ei ole varastossa 
+                korvataan tuote automaattisesti vastaavan hintaisella muulla tuotteella. 
+                Huomioithan että tuote saatetaan korvata vastaavanhintaisella muulla tuotteella, 
+                myös kukkien määrä saattaa vaihdella paikallisen/sesonkikohtaisen hintatason mukaan. 
+                Kaikilla Suomen paikkakunnilla ei ole enää lainkaan kukkakauppoja tai kukkakaupan 
+                valikoima saattaa olla hyvin pieni ja kausittainen. Paikkakunnan ainut kauppa saattaa 
+                olla esim. lomien vuoksi kokonaan suljettu. Mikäli tilaus tästä syystä joudutaan 
+                perumaan palautamme maksetun maksun kokonaisuudessaan. Parhaan saatavuuden varmistamiseksi 
+                tilaus kannattaa tehdä hyvissä ajoin, jopa viikkoa ennen.
+            </p>
+        </div>
+        </div>
+    </div>
+<div>    
+
+<!-- Footer -->
+<div class="mt-5 p-4 bg-light ext-secondary text-center">
+    <p>Koulun projekti</p>
+    <p><a href="http://www.dataflora.fi" class="link-light">Dataflora</a></p>
+</div>
+
+{% endblock content %}

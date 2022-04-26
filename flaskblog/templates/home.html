@@ -1,15 +1,89 @@
 {% extends "layout.html" %}
 {% block content %}
-    {% for post in posts %}
+
+<!-- Otsikko --> 
+  <div class="media-body" style= "background-color: #d2f0ed">
+    <h6><img src="{{ url_for('static', filename='pics/default.jpg') }}" class="rounded-circle" alt="" width="200" height="200">
+      Kukka ystävyydelle! Muista ystävää, lähetä kukkia.</h6> 
+  </div>
+
+<!-- Sisältö -->
+  <div class="container mt-5">
+    <h5>Kevät</h5><br> 
+      <div class="row">
+        <div class="col-sm-4">
+          <p><img src="{{ url_for('static', filename='pics/kevat1.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+          <h6>Soma kimppu</h6>
+        </div>
+        <div class="col-sm-4">
+          <p><img src="{{ url_for('static', filename='pics/kevat2.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+          <h6>Ajaton kimppu</h6>
+        </div>
+        <div class="col-sm-4">
+          <p><img src="{{ url_for('static', filename='pics/kevat3.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+          <h6>Iloinen kimppu</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h5>Ystävälle</h5><br> 
+        <div class="row">
+          <div class="col-sm-4">
+            <p><img src="{{ url_for('static', filename='pics/ystava1.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+            <h6>Viehättävä kimppu</h6>
+          </div>
+          <div class="col-sm-4">
+            <p><img src="{{ url_for('static', filename='pics/ystava2.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+            <h6>Tsemppi kimppu</h6>
+          </div>
+          <div class="col-sm-4">
+            <p><img src="{{ url_for('static', filename='pics/ystava3.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+            <h6>Ihana kimppu</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <h5>Syntymäpäiväksi</h5><br> 
+          <div class="row">
+            <div class="col-sm-4">
+              <p><img src="{{ url_for('static', filename='pics/syntyma1.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+              <h6>Valkoinen kimppu</h6>
+            </div>
+            <div class="col-sm-4">
+              <p><img src="{{ url_for('static', filename='pics/syntyma2.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+              <h6>Romanssi kimppu</h6>
+            </div>
+            <div class="col-sm-4">
+              <p><img src="{{ url_for('static', filename='pics/syntyma3.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="200" height="200"></p>
+              <h6>Vintage kimppu</h6>
+            </div>
+          </div>
+        </div><br><br><br>
+
+
+<!-- Viestikenttä -->
+<h3>Viestikenttä</h3><br>
+
+  {% for post in posts %}
         <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ url_for('static', filename='pics/' + post.author.image_file) }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ post.author }}</a>
-              <small class="text-muted">{{ post.date_posted }}</small>
+              <a class="mr-2" href="#">{{ post.author.username }}</a>
+              <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
-            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
           </div>
-        </article>
-    {% endfor %}
+        </article><br>
+  {% endfor %}
+
+<!-- Footer -->
+  <div class="mt-5 p-4 bg-light ext-secondary text-center">
+    <p>Koulun projekti</p>
+    <p><a href="http://www.dataflora.fi" class="link-light">Dataflora</a></p>
+  </div>
+
 {% endblock content %}

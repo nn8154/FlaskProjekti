@@ -4,7 +4,7 @@
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
+                <legend class="border-bottom mb-4">Liity tänään</legend>
                 <div class="form-group">
                     {{ form.username.label(class="form-control-label") }}
 
@@ -66,7 +66,14 @@
     </div>
     <div class="border-top pt-3">
         <small class="text-muted">
-            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+            Onko oma tili? <a class="ml-2" href="{{ url_for('login') }}">Kirjaudu sisään</a>
         </small>
     </div>
+
+<!-- Footer -->
+<div class="mt-5 p-4 bg-light ext-secondary text-center">
+    <p>Koulun projekti</p>
+    <p><a href="http://www.dataflora.fi" class="link-light">Dataflora</a></p>
+</div>
+
 {% endblock content %}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Otsikko -->  
+<div class="media-body" style= "background-color: #d2f0ed">
+    <h6><img src="{{ url_for('static', filename='pics/default.jpg') }}" class="rounded-circle" alt="" width="200" height="200">
+      Kukka ystävyydelle! Muista ystävää, lähetä kukkia.</h6> 
+</div>
+
+<!-- Sisältö --> 
+<div class="container mt-5">
+<h4>Yhteystiedot</h4><br> 
+    <div class="row">
+    <div class="col-sm-7">
+        <p>
+            DataFloralla on yli 300 yhteistyökumppani kukkakauppaa eri puolilla Suomea.
+            Kaikissa kaupungeissa ja useimmissa taajamissa. Datafloran kautta voit tehdä kukkatilauksen minne tahansa Suomessa.
+            DataFloran kautta voit tehdä kukkatilauksen myös ulkomaille. 
+            Toimitamme kukkatilauksen perille puolestasi yli 100 maahan. 
+            Kukkakimput sidotaan aina paikallisten tapojen mukaan. 
+            Tee tilaus ulkomaille soittamalla toimiston puh. 020 360 210.
+        </p>
+    </div>
+        <div class="col-sm-4">
+          <p><img src="{{ url_for('static', filename='pics/syntyma3.jpg') }}"class="rounded-circle" alt="kevat3" width="150" height="150"></p>
+          <h4></h4>
+        </div>
+      </div>
+    </div>
+<div>
+
+<div class="container mt-5">
+<h3></h3><br> 
+    <div class="row">
+        <div class="col-sm-4">
+            <p><img src="{{ url_for('static', filename='pics/ystava2.jpg') }}" class="rounded-circle" alt="kevat3" width="150" height="150"></p>
+        </div>  
+        <div class="col-sm-7">
+            <p>
+                Käyntiosoite: Kukkien Datavälitys Oy, Helsinki.
+            </p>
+            <p>
+                Laskutusosoite: Kukkien Datavälitys Oy
+                Vastaanotamme vain sähköisiä laskuja. Paperilaskut palautetaan lähettäjälle.
+            </p>
+            <p>
+                Muut yhteystiedot: puh. , fax. , sähköposti admin@admin.com. Käsittelemme sähköpostia maanantaista lauantaihin. 
+            </p> 
+            <p>Toimisto palvelee Ma-Pe klo 8:00-17:00</p>
+            <p>Puhelinmyynti palvelee Ma-Pe 8:00-20:00 sekä La-Su 10:00 - 15:00</p>  
+
+        </div>
+        </div>
+    </div>
+<div>
+
+<!-- Footer -->
+<div class="mt-5 p-4 bg-light ext-secondary text-center">
+    <p>Koulun projekti</p>
+    <p><a href="http://www.dataflora.fi" class="link-light">Dataflora</a></p>
+</div>
+
+
+{% endblock content %}
